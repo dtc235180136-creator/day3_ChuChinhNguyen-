@@ -1,0 +1,24 @@
+@model b3_chuchinhnguyen.Models.Product
+
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+}
+
+<h1>Chi tiết sản phẩm</h1>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">ID</dt>
+    <dd class="col-sm-9">@Model.ID</dd>
+    <dt class="col-sm-3">Tên sản phẩm</dt>
+    <dd class="col-sm-9">@Model.Name</dd>
+    <dt class="col-sm-3">Giá</dt>
+    <dd class="col-sm-9">@Model.Price.ToString("N0")</dd>
+    <dt class="col-sm-3">Mô tả</dt>
+    <dd class="col-sm-9">@Model.Description</dd>
+    <dt class="col-sm-3">Category ID</dt>
+    <dd class="col-sm-9">@Model.CategoryID</dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Sửa</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</div>
